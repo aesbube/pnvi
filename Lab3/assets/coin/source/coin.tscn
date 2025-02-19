@@ -1,0 +1,126 @@
+[gd_scene load_steps=9 format=4 uid="uid://5bx2vvob6b6a"]
+
+[ext_resource type="Texture2D" uid="uid://dps784vbkhlx3" path="res://assets/coin/source/model_0.png" id="1_4fbqc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bjje5"]
+resource_name = "gold_coin_texture.png"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_4fbqc")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_t8p5l"]
+_surfaces = [{
+"aabb": AABB(0.5, -9, -8, 7, 7, 1),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAACAAEAAQACAAMABAAGAAUABQAGAAcABAACAAYABgACAAAABwABAAUABQABAAMABgAAAAcABwAAAAEAAgAEAAMAAwAEAAUA"),
+"name": "gold_coin_texture.png",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("////////AAD//wAA//8AAP////8AAAAA//8AAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD/////AAAAAAAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_hn1uc"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(0.5, -9, -8, 7, 7, 1),
+"attribute_data": PackedByteArray("/w//j/8P/1f/F/+P/w//V/8X/1f/F/+P/xf/j/8X/1f/H/+P/xf/V/8f/1f/H/+P/1f/f/9X/4f/H/9//1f/h/8f/4f/H/9//6////+v//f/d////6//9/93//f/d///AAD/xwAA/4//N//HAAD/j/83/4//N//HAAD//wAA/8f/N///AAD/x/83/8f/N///"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAACAAEAAwAFAAQABgAIAAcACQALAAoADAAOAA0ADwARABAAEgAUABMAFQAXABYAGAAaABkAGwAdABwAHgAgAB8AIQAjACIA"),
+"material": SubResource("StandardMaterial3D_bjje5"),
+"name": "gold_coin_texture.png",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("/////////z///wAA////P/////8AAP8///8AAP///z///wAAAAD/P/////8AAP8/AAD//wAA/z8AAAAAAAD/PwAA//////8/AAAAAAAA/z8AAAAA////PwAA//////8/AAD//wAAAAAAAP////8AAP////8AAAAAAAD/////AAD///////8AAP////8AAAAAAAAAAP////8AAAAAAAD/////AAD/////AAAAAAAA/////wAAAAD/////AAD/////AAD//////n8AAAAA///+f/////////5/AAAAAP///n///wAA///+f/////////5//////wAAAAD//wAAAAAAAAAA//8AAAAA//8AAAAAAAAAAAAAAAAAAAAA//8AAAAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/3////9/////f////3////9/////f////3//v/9//7//f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9//z//f/8//3////9/////f////3////9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_t8p5l")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_tnbtc"]
+_surfaces = [{
+"aabb": AABB(0, -8, -8, 8, 5, 1),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAACAAEAAQACAAMABAAGAAUABQAGAAcABAACAAYABgACAAAABwABAAUABQABAAMABgAAAAcABwAAAAEAAgAEAAMAAwAEAAUA"),
+"name": "gold_coin_texture.png",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("////////AAD//wAA//8AAP////8AAAAA//8AAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD/////AAAAAAAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_s1kdu"]
+resource_name = "blockbench_export_mesh2"
+_surfaces = [{
+"aabb": AABB(0, -8, -8, 8, 5, 1),
+"attribute_data": PackedByteArray("/1f/h/9X/1//X/+H/1f/X/9f/1//X/+H/x//f/8f/1f/J/9//x//V/8n/1f/J/9//5//p/+f/6//X/+n/5//r/9f/6//X/+n/5//p/+f/5//X/+n/5//n/9f/5//X/+n/1//1/9f/6//n//X/1//r/+f/6//n//X/zf///83/9f/d////zf/1/93/9f/d///"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAACAAEAAwAFAAQABgAIAAcACQALAAoADAAOAA0ADwARABAAEgAUABMAFQAXABYAGAAaABkAGwAdABwAHgAgAB8AIQAjACIA"),
+"material": SubResource("StandardMaterial3D_bjje5"),
+"name": "gold_coin_texture.png",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("/////////z///wAA////P/////8AAP8///8AAP///z///wAAAAD/P/////8AAP8/AAD//wAA/z8AAAAAAAD/PwAA//////8/AAAAAAAA/z8AAAAA////PwAA//////8/AAD//wAAAAAAAP////8AAP////8AAAAAAAD/////AAD///////8AAP////8AAAAAAAAAAP////8AAAAAAAD/////AAD/////AAAAAAAA/////wAAAAD/////AAD/////AAD//////n8AAAAA///+f/////////5/AAAAAP///n///wAA///+f/////////5//////wAAAAD//wAAAAAAAAAA//8AAAAA//8AAAAAAAAAAAAAAAAAAAAA//8AAAAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/3////9/////f////3////9/////f////3//v/9//7//f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9//z//f/8//3////9/////f////3////9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_tnbtc")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_e18ac"]
+_surfaces = [{
+"aabb": AABB(-8, -8, -8, 5, 8, 1),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAACAAEAAQACAAMABAAGAAUABQAGAAcABAACAAYABgACAAAABwABAAUABQABAAMABgAAAAcABwAAAAEAAgAEAAMAAwAEAAUA"),
+"name": "gold_coin_texture.png",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("////////AAD//wAA//8AAP////8AAAAA//8AAAAAAAAAAP//AAAAAAAAAAAAAAAAAAD/////AAAAAAAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_hipxa"]
+resource_name = "blockbench_export_mesh3"
+_surfaces = [{
+"aabb": AABB(-8, -8, -8, 5, 8, 1),
+"attribute_data": PackedByteArray("AAD/jwAA/0//B/+PAAD/T/8H/0//B/+P/wf/j/8H/0//D/+P/wf/T/8P/0//D/+P/1//z/9f/9f/N//P/1//1/83/9f/N//P/1//z/9f/8f/N//P/1//x/83/8f/N//P/1//n/9f/1//h/+f/1//X/+H/1//h/+f/zf/x/83/4f/X//H/zf/h/9f/4f/X//H"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAACAAEAAwAFAAQABgAIAAcACQALAAoADAAOAA0ADwARABAAEgAUABMAFQAXABYAGAAaABkAGwAdABwAHgAgAB8AIQAjACIA"),
+"material": SubResource("StandardMaterial3D_bjje5"),
+"name": "gold_coin_texture.png",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("/////////z///wAA////P/////8AAP8///8AAP///z///wAAAAD/P/////8AAP8/AAD//wAA/z8AAAAAAAD/PwAA//////8/AAAAAAAA/z8AAAAA////PwAA//////8/AAD//wAAAAAAAP////8AAP////8AAAAAAAD/////AAD///////8AAP////8AAAAAAAAAAP////8AAAAAAAD/////AAD/////AAAAAAAA/////wAAAAD/////AAD/////AAD//////n8AAAAA///+f/////////5/AAAAAP///n///wAA///+f/////////5//////wAAAAD//wAAAAAAAAAA//8AAAAA//8AAAAAAAAAAAAAAAAAAAAA//8AAAAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/3////9/////f////3////9/////f////3//v/9//7//f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9//z//f/8//3////9/////f////3////9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_e18ac")
+
+[node name="Coin" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -7.5)
+
+[node name="2c1f0972-3a7a-8556-97a4-63b3cb20c273" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 9.5, 15)
+mesh = SubResource("ArrayMesh_hn1uc")
+skeleton = NodePath("")
+
+[node name="834fdd11-b702-47ce-53d2-68fe7dbe6865" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 9.5, 15)
+mesh = SubResource("ArrayMesh_s1kdu")
+skeleton = NodePath("")
+
+[node name="03e2e040-5fcd-007a-115b-62651886841b" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 8, 15)
+mesh = SubResource("ArrayMesh_hipxa")
+skeleton = NodePath("")

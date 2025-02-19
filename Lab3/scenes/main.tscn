@@ -1,0 +1,176 @@
+[gd_scene load_steps=10 format=3 uid="uid://bh4dw7vyj6u45"]
+
+[ext_resource type="PackedScene" uid="uid://bmpj1a1qtpur4" path="res://scenes/player.tscn" id="1_c71sb"]
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_lposm"]
+[ext_resource type="Texture2D" uid="uid://c53e8vm645ujh" path="res://assets/grass/Grass007_4K-JPG_Color.jpg" id="2_mtglw"]
+[ext_resource type="PackedScene" uid="uid://b4wffnkielq83" path="res://scenes/coin_pickup.tscn" id="3_lhcoe"]
+[ext_resource type="PackedScene" uid="uid://0xncyafpaeov" path="res://assets/trees/tree_animate.tscn" id="4_djcwv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2avj3"]
+albedo_texture = ExtResource("2_mtglw")
+uv1_scale = Vector3(24, 24, 24)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fiv2p"]
+sky_top_color = Color(0.263905, 0.457172, 0.685893, 1)
+sky_horizon_color = Color(0.648721, 0.66765, 0.574408, 1)
+ground_horizon_color = Color(0.647059, 0.666667, 0.572549, 1)
+
+[sub_resource type="Sky" id="Sky_sh503"]
+sky_material = SubResource("ProceduralSkyMaterial_fiv2p")
+
+[sub_resource type="Environment" id="Environment_fb0a7"]
+background_mode = 2
+sky = SubResource("Sky_sh503")
+tonemap_mode = 2
+glow_enabled = true
+fog_enabled = true
+fog_mode = 1
+fog_density = 1.0
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_lposm")
+
+[node name="Player" parent="." instance=ExtResource("1_c71sb")]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 2, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.137222, -0.410775, -0.0426531)
+material_override = SubResource("StandardMaterial3D_2avj3")
+use_collision = true
+size = Vector3(200, 1, 200)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_fb0a7")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+
+[node name="CoinPickup" parent="." instance=ExtResource("3_lhcoe")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.231743, -9.33561)
+
+[node name="CoinPickup2" parent="." instance=ExtResource("3_lhcoe")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 10.013, 0.231743, -9.33561)
+
+[node name="CoinPickup3" parent="." instance=ExtResource("3_lhcoe")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.231743, 6.18412)
+
+[node name="CoinPickup4" parent="." instance=ExtResource("3_lhcoe")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 27.8157, 0.231743, -3.10357)
+
+[node name="CoinPickup5" parent="." instance=ExtResource("3_lhcoe")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 14.6774, 0.231743, -0.35275)
+
+[node name="CoinPickup6" parent="." instance=ExtResource("3_lhcoe")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -18.9247, 0.231743, -2.66241)
+
+[node name="CoinPickup7" parent="." instance=ExtResource("3_lhcoe")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -16.544, 0.231743, -16.8406)
+
+[node name="CoinPickup8" parent="." instance=ExtResource("3_lhcoe")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 12.3364, 0.231743, 12.167)
+
+[node name="CoinPickup9" parent="." instance=ExtResource("3_lhcoe")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -15.3017, 0.231743, 8.44887)
+
+[node name="CoinPickup10" parent="." instance=ExtResource("3_lhcoe")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 25.3146, 0.231743, 9.15386)
+
+[node name="Trees" parent="." instance=ExtResource("4_djcwv")]
+transform = Transform3D(0.197654, 0, 0.0305454, 0, 0.2, 0, -0.0305454, 0, 0.197654, -7.60909, 0.531181, -29.6379)
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("4_djcwv")]
+transform = Transform3D(0.196796, 0, -0.035654, 0, 0.2, 0, 0.035654, 0, 0.196796, 34.6152, 0.0892262, -25.7963)
+
+[node name="Trees2" parent="." instance=ExtResource("4_djcwv")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, -38, 0, 16)
+
+[node name="Trees3" parent="." instance=ExtResource("4_djcwv")]
+transform = Transform3D(0.194253, 0, -0.0476016, 0, 0.2, 0, 0.0476016, 0, 0.194253, -7.81346, 0.0892253, 35.8072)
+
+[node name="Trees4" parent="." instance=ExtResource("4_djcwv")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 32.3941, 0.0892253, 40.4658)
+
+[node name="Trees5" parent="." instance=ExtResource("4_djcwv")]
+transform = Transform3D(-0.0087134, 0, 0.19981, 0, 0.2, 0, -0.19981, 0, -0.0087134, 39.1614, 0.0892367, 3.89933)
+
+[node name="Trees6" parent="." instance=ExtResource("4_djcwv")]
+transform = Transform3D(0.000335112, 0, 0.2, 0, 0.2, 0, -0.2, 0, 0.000335112, 41.1969, 0.0892215, -35.6725)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.9484, 53.1221)
+visible = false
+use_collision = true
+size = Vector3(150, 30, 1)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -55.8479, 7.9484, 7.98404)
+visible = false
+use_collision = true
+size = Vector3(150, 30, 1)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 51.2524, 7.9484, -4.86146)
+visible = false
+use_collision = true
+size = Vector3(150, 30, 1)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.135719, 8.07095, -45.8395)
+visible = false
+use_collision = true
+size = Vector3(150, 30, 1)
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GameOverScreen" type="CenterContainer" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/GameOverScreen"]
+layout_mode = 2
+
+[node name="TryAgainButton" type="Button" parent="CanvasLayer/GameOverScreen/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Try Again?"
+
+[node name="Label" type="Label" parent="CanvasLayer/GameOverScreen/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Game Over!"
+horizontal_alignment = 1
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="WinScreen" type="CenterContainer" parent="CanvasLayer2"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2/WinScreen"]
+layout_mode = 2
+
+[node name="TryAgainButton" type="Button" parent="CanvasLayer2/WinScreen/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Try Again?"
+
+[node name="Label" type="Label" parent="CanvasLayer2/WinScreen/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "You Won!"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="TimerLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

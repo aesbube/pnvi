@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmpj1a1qtpur4"]
+
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_u1ux8"]
+[ext_resource type="PackedScene" uid="uid://c0mo8tek77du4" path="res://assets/gdbot/character_skin.tscn" id="2_yww3g"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ecmf5"]
+height = 1.3075
+
+[node name="Player" type="CharacterBody3D" groups=["player"]]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+script = ExtResource("1_u1ux8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.612165, 0)
+shape = SubResource("CapsuleShape3D_ecmf5")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, 2.24793e-08, -8.44833e-08, 0, 0.966376, 0.257133, 8.74228e-08, 0.257133, -0.966376, 1.6028e-07, 2.25657, -4.01139)
+fov = 80.2643
+
+[node name="CharacterSkin" parent="." instance=ExtResource("2_yww3g")]
